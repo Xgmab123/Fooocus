@@ -291,13 +291,13 @@ default_refiner_switch = get_config_item_or_set_default(
 )
 default_loras_min_weight = get_config_item_or_set_default(
     key='default_loras_min_weight',
-    default_value=-2,
+    default_value=-10,
     validator=lambda x: isinstance(x, numbers.Number) and -10 <= x <= 10,
     expected_type=numbers.Number
 )
 default_loras_max_weight = get_config_item_or_set_default(
     key='default_loras_max_weight',
-    default_value=2,
+    default_value=10,
     validator=lambda x: isinstance(x, numbers.Number) and -10 <= x <= 10,
     expected_type=numbers.Number
 )
@@ -435,7 +435,7 @@ default_image_prompt_advanced_checkbox = get_config_item_or_set_default(
 )
 default_max_image_number = get_config_item_or_set_default(
     key='default_max_image_number',
-    default_value=32,
+    default_value=200,
     validator=lambda x: isinstance(x, int) and x >= 1,
     expected_type=int
 )
